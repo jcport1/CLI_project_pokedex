@@ -1,0 +1,5 @@
+#!/isr/bin/env ruby 
+
+require_relative "../environment"
+
+API.start   
