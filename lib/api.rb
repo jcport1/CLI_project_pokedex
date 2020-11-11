@@ -1,3 +1,4 @@
+require 'pry'
 class API
     
     def self.grab_pokemons
@@ -6,6 +7,7 @@ class API
         uri = URI(url)
         response = Net::HTTP.get(uri)
         hash = JSON.parse(response)
+        binding.pry 
         array_of_pokemons = hash[]
         array_of_pokemons.each do |pokemon|
         end 
