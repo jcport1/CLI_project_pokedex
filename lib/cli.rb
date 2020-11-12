@@ -21,6 +21,7 @@ class Cli
         if user_input == "yes" || user_input == "y"
             puts "The user's tale of grand adventure is about to unfold!"
             display_list_of_pokemons
+            ask_user_for_pokemon_choice
         else 
             #end the program
             puts "Ok...You have the ability to become a great Pokemon Professor someday!"
@@ -33,8 +34,12 @@ class Cli
         #access all the pokemon
         #print each one out
         Pokemon.all.each.with_index(1) do |pokemon, index|
-            puts "#{index}. #{pokemon.name}"" 
+            puts "#{index}. #{pokemon.name}" 
         end 
+
+    end 
+
+    def ask_user_for_pokemon_choice
 
     end 
 
