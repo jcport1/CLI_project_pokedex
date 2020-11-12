@@ -9,10 +9,11 @@ class API
         hash = JSON.parse(response)
         array_of_pokemons = hash["results"]
         array_of_pokemons.each do |pokemon|
-            binding.pry 
-           Pokemon.new(pokemon["name"],pokemon["url"])
+           Pokemon.new(name: pokemon["name"],index: pokemon["url"])
            #iterating one more level to get the pokemon url info? 
         end 
+
+        binding.pry 
 
     end 
 
