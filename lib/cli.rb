@@ -51,8 +51,17 @@ class Cli
         end 
 
         pokemon_instance = Pokemon.all[index]
-        puts pokemon_instance.name 
+        #instead call the method that will print out the details
+        #puts pokemon_instance.name 
+        display_pokemon_details(pokemon_instance)
 
+    end 
+
+    def display_pokemon_details(pokemon_instance)
+
+         #display details
+        puts pokemon.name
+        puts pokeman.pokeman_data 
     end 
 
 end 

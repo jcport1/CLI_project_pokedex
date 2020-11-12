@@ -1,6 +1,6 @@
 class Pokemon
 
-    attr_accessor :name, :pokemon_data
+    attr_accessor :name, :pokemon_data #other important attributes
 
     @@all = []
 
