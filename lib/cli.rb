@@ -42,10 +42,10 @@ class Cli
     def ask_user_for_pokemon_choice
 
         puts "*---------------------*"
-        puts "Pokemon around the world wait for you. Choose a number for more info."
-        index = gets.strip.to_i -1
+        puts "Pokemon around the world wait for you. Enter a number for more info."
+        index = gets.strip.to_i - 1
         pokemon_instance = Pokemon.all[index]
-        puts pokemon_instance 
+        puts pokemon_instance.name 
 
     end 
 
