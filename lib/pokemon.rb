@@ -1,11 +1,13 @@
 class Pokemon
 
-    
+    attr_accessor :name, :url
 
     @@all = []
 
-    def initialize
+    def initialize(name, url)
 
+        @name = name
+        @url = url 
         @@all << self
 
     end 
