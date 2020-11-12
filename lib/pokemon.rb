@@ -1,13 +1,13 @@
 class Pokemon
 
-    attr_accessor :name, :pokemon_data #other important attributes
+    attr_accessor :name, :attribute #other important attributes
 
     @@all = []
 
-    def initialize(name:, pokemon_data:)
+    def initialize(name:, attribute:)
 
         @name = name
-        @pokemon_data = pokemon_data
+        @attribute = attribute
         @@all << self
 
     end 

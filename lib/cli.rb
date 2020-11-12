@@ -1,3 +1,4 @@
+
 class Cli
 
     def start
@@ -19,10 +20,10 @@ class Cli
         puts "Type 'yes' to continue or any other key to exit"
         user_input = gets.strip.downcase
         if user_input == "yes" || user_input == "y"
+
             puts "The user's tale of grand adventure is about to unfold!"
             display_list_of_pokemons
-            found_choice = ask_user_for_pokemon_choice
-            display_pokemon_details(found_choice)
+            ask_user_for_pokemon_choice
             sleep(1)
             menu 
             #or while loop* 
@@ -34,6 +35,36 @@ class Cli
 
     end 
 
+    def ask_user_for_pokemon_choice
+
+        puts "*---------------------*"
+        puts "Pokemon around the world wait for you. Enter a number for more info."
+        index = gets.strip.to_i - 1 #ask for user input
+        max_limit = Pokemon.all.length - 1
+
+        until index.between?(0,max_limit)
+            puts "Erm, sorry that's not a valid choice"
+            index = gets.strip.to_i - 1 #re-ask for user input if invalid
+        end 
+
+        pokemon_instance = Pokemon.all[index]
+
+        #instead call the method that will print out the details
+        #puts pokemon_instance.name 
+        display_pokemon_details(pokemon_instance)
+
+    end 
+
+    def display_pokemon_details(pokemon)
+
+        #display details
+       puts pokemon.name
+       puts pokemon.attribute  
+
+       # puts pokemon.pokemon_data
+
+   end 
+
     def display_list_of_pokemons
 
         #access all the pokemon
@@ -43,32 +74,6 @@ class Cli
         end 
 
     end 
-
-    def ask_user_for_pokemon_choice
-
-        puts "*---------------------*"
-        puts "Pokemon around the world wait for you. Enter a number for more info."
-        index = gets.strip.to_i - 1 #ask for user input
-        max_limit = Pokemon.all.length - 1
-        until index.between?(0,max_limit)
-            puts "Erm, sorry that's not a valid choice"
-            index = gets.strip.to_i - 1 #re-ask for user input if invalid
-        end 
-
-        pokemon_instance = Pokemon.all[index]
-        #instead call the method that will print out the details
-        #puts pokemon_instance.name 
-
-        display_pokemon_details(pokemon_instance)
-
-    end 
-
-    def display_pokemon_details(pokemon_instance)
-
-         #display details
-        puts pokemon.name
-        puts pokeman.pokeman_data
-
-    end 
+   
 
 end 
