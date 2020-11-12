@@ -13,7 +13,7 @@ class API
            #iterating one more level to get the pokemon url info? 
         end 
 
-        binding.pry 
+        
 
     end 
 

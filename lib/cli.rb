@@ -1,14 +1,13 @@
-class CLI
+class Cli
 
     def start
-    
         puts "*--------------------*"
-        puts "Welcome to my , Ash Ketchum!"
+        puts "Welcome to Pallet town , Ash Ketchum!"
         puts "*---------------------*"
-        puts "My name is professor Oak"
+        puts "My name is Professor Oak"
         puts "Wannna explore the pokedex? Y or N"
         @input = gets.strip.downcase
-        API.grab_pokemons
+        # API.grab_pokemons
     end 
 
 

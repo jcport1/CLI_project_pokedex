@@ -7,7 +7,7 @@ class Pokemon
     def initialize(name:, index:)
 
         @name = name
-        @url = url 
+        @index = index
         @@all << self
 
     end 

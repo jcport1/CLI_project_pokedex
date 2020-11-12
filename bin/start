@@ -2,4 +2,4 @@
 
 require_relative "../environment"
 
-API.grab_pokemons 
+Cli.new.start
