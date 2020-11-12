@@ -21,7 +21,12 @@ class Cli
         if user_input == "yes" || user_input == "y"
             puts "The user's tale of grand adventure is about to unfold!"
             display_list_of_pokemons
-            ask_user_for_pokemon_choice
+            found_choice = ask_user_for_pokemon_choice
+            display_pokemon_details(found_choice)
+            sleep(1)
+            menu 
+            #or while loop* 
+
         else 
             #end the program
             puts "Ok...You have the ability to become a great Pokemon Professor someday!"
@@ -53,6 +58,7 @@ class Cli
         pokemon_instance = Pokemon.all[index]
         #instead call the method that will print out the details
         #puts pokemon_instance.name 
+
         display_pokemon_details(pokemon_instance)
 
     end 
@@ -61,7 +67,8 @@ class Cli
 
          #display details
         puts pokemon.name
-        puts pokeman.pokeman_data 
+        puts pokeman.pokeman_data
+
     end 
 
 end 
