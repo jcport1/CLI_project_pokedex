@@ -3,11 +3,12 @@ class Cli
 
     def start
 
-        puts "*--------------------*"
-        puts "Welcome to Pallet Town, Ash Ketchum!"
-        puts "*---------------------*"
-        puts "My name is Professor Oak"
-        puts "*---------------------*"
+        puts "*-------------------------------------*"
+        puts "\nWelcome to Pallet Town, Ash Ketchum!"
+        puts "\n*-------------------------------------*"
+        sleep(1)
+        puts "\nMy name is Professor Oak"
+        puts "\n*-------------------------------------*"
         API.grab_pokemons
         self.menu 
     
@@ -15,15 +16,17 @@ class Cli
 
     def menu
 
-        puts "Wannna explore the pokedex?"
-        puts "*---------------------*"
-        puts "Type 'yes' to continue or any other key to exit"
+        puts "\nWannna explore the pokedex?"
+
+        sleep(1)
+    
+        puts "\nType 'yes' to continue or any other key to exit"
 
         user_input = gets.strip.downcase
 
         if user_input == "yes" || user_input == "y"
 
-            puts "The user's tale of grand adventure is about to unfold!"
+            puts "\nThe user's tale of grand adventure is about to unfold!"
 
             display_list_of_pokemons #call method 
 
@@ -36,7 +39,11 @@ class Cli
 
         else 
             #end the program
-            puts "Ok...You have the ability to become a great Pokemon Professor someday!"
+
+            sleep(1)
+            
+            puts "\nOk...You have the ability to become a great Pokemon Professor someday!"
+           
         end 
 
     end 
@@ -53,8 +60,8 @@ class Cli
 
     def ask_user_for_pokemon_choice
 
-        puts "*---------------------*"
-        puts "Pokemon around the world wait for you. Enter a number for more info."
+       
+        puts "\nPokemon around the world wait for you. Enter a number for more info."
 
         index = gets.strip.to_i - 1 #ask for user input
         max_limit = Pokemon.all.length - 1
