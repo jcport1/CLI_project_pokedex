@@ -19,9 +19,9 @@ class API
     end 
 
 
-    def self.grab_pokemon_info(pokemon)
+    def self.grab_pokemon_info(pokemon_object_lookup)
      
-        url = "#{pokemon.url}"
+        url = "#{pokemon_object_lookup.url}"
         uri = URI(url)
         response = Net::HTTP.get(uri)
         pokemon_details = JSON.parse(response)
