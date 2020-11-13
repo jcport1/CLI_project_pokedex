@@ -82,9 +82,9 @@ class Cli
         #display details
         puts "\nName: #{pokemon_object_lookup.name}"
         sleep(1)
-        puts "Height: #{pokemon_object_lookup.height}"
-        puts "Weight: #{pokemon_object_lookup.weight}"
-        puts "Abilities: #{pokemon_object_lookup.abilities}"
+        puts "\nHeight: #{pokemon_object_lookup.height} decimetres"
+        puts "\nWeight: #{pokemon_object_lookup.weight} hectograms"
+        puts "\nAbilities: #{pokemon_object_lookup.abilities}"
        # puts pokemon.pokemon_data
      end 
 
