@@ -15,6 +15,8 @@ class Cli
 
     def menu
 
+        sleep(2)
+
         puts "\nWannna explore the pokedex?"
 
         sleep(2)
@@ -42,6 +44,7 @@ class Cli
             sleep(2)
             
             puts "\nOk...You have the ability to become a great Pokemon Professor someday!"
+            puts "\n"
            
         end 
 
@@ -60,7 +63,7 @@ class Cli
     def ask_user_for_pokemon_choice
 
        
-        puts "\nPokemon around the world wait for you. Enter a number for more info."
+        puts "\nPokemon around the world wait for you! Enter a number for more info."
 
         index = gets.strip.to_i - 1 #ask for user input
         max_limit = Pokemon.all.length - 1
@@ -74,7 +77,12 @@ class Cli
 
         #instead call the method that will print out the details
         #puts pokemon_instance.name 
+        puts "Great choice! Here ya go:"
+
+        sleep (2)
+        puts "\n"
         display_pokemon_details(pokemon_instance)
+        
 
     end 
 
