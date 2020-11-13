@@ -1,4 +1,4 @@
-
+require 'pry'
 class Cli
 
     def start
@@ -57,26 +57,27 @@ class Cli
     def ask_user_for_pokemon_choice
 
         puts "\nPokemon around the world wait for you! Enter a number for more info."
-        pokemon = gets.strip.to_i - 1 #ask for user input
+        pokemon_choice_index = gets.strip.to_i - 1 #ask for user input
         max_limit = Pokemon.all.length - 1
 
 
-        until pokemon.between?(0,max_limit)
+        until pokemon_choice_index.between?(0,max_limit)
             puts "Erm, sorry that's not a valid choice"
-            pokemon = gets.strip.to_i - 1 #re-ask for user input if invalid
+            pokemon_choice_index = gets.strip.to_i - 1 #re-ask for user input if invalid
         end 
 
-        pokemon_instance = Pokemon.all[pokemon]
+        #user chose pokemon
+        pokemon_object_lookup = Pokemon.all[pokemon_choice_index]
         #instead call the method that will print out the details
         #puts pokemon_instance.name 
         puts "Great choice! Here ya go:"
         sleep (2)
         puts "\n"
-        Api.grab_pokemon_info(pokemon_instance)
-        display_pokemon-info(pokemon_instance)
+        API.grab_pokemon_info(pokemon_object_lookup)
+        self.display_pokemon_info(pokemon_object_lookup)
     end 
 
-    def display_pokemon_info(pokemon_instance)
+    def display_pokemon_info(pokemon_object_lookup)
 
         #display details
         puts "\nName: #{pokemon.name}"
