@@ -27,7 +27,6 @@ class Cli
             sleep(2)
             puts "\nOk...You have the ability to become a great Pokemon Professor someday!"
             puts "\n"
-
     end 
 
     def prompt_user 
@@ -61,24 +60,25 @@ class Cli
         pokemon = gets.strip.to_i - 1 #ask for user input
         max_limit = Pokemon.all.length - 1
 
+
         until index.between?(0,max_limit)
             puts "Erm, sorry that's not a valid choice"
             pokemon = gets.strip.to_i - 1 #re-ask for user input if invalid
         end 
 
-        pokemon_instance = Pokemon.all[index]
+        pokemon_instance = Pokemon.all[pokemon]
         #instead call the method that will print out the details
         #puts pokemon_instance.name 
         puts "Great choice! Here ya go:"
 
         sleep (2)
         puts "\n"
-        display_pokemon_details(pokemon_instance)
+        Api.grab_pokemon_info(pokemon_instance)
+        display_pokemon-info(pokemon_instance)
     end 
 
-    def display_pokemon_details(pokemon)
-
-        API.grab_pokemon_info
+    def display_pokemon_info(pokemon_instance)
+        
         #display details
         puts "\nName: #{pokemon.name}"
         sleep(1)
