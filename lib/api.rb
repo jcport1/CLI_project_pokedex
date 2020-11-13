@@ -10,7 +10,7 @@ class API
         array_of_pokemons = hash["results"]
 
         array_of_pokemons.each do |pokemon|
-           Pokemon.new(name: pokemon["name"], attribute: pokemon["url"])
+           Pokemon.new(name: pokemon["name"], url: pokemon["url"])
            #iterating one more level to get the pokemon url info? 
         end 
 
@@ -21,7 +21,7 @@ class API
 
     def self.grab_pokemon_info(pokemon)
      
-        url = "https://pokeapi.co/api/v2/pokemon/#{pokemon.index}"
+        url = "#{pokemon.url}"
         uri = URI(url)
         response = Net::HTTP.get(uri)
         pokemon_details = JSON.parse(response)

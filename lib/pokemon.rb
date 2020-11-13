@@ -1,10 +1,10 @@
 class Pokemon
 
-    attr_accessor :name, :index, :height, :weight, :abilities #other important attributes
+    attr_accessor :name, :url, :height, :weight, :abilities #other important attributes
 
     @@all = []
 
-    def initialize(name:, index:)
+    def initialize(name:, url:)
 
         @name = name
         @index = index
