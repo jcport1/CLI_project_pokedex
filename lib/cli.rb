@@ -17,7 +17,7 @@ class Cli
 
         sleep(2)
 
-        puts "\nI hear you came to learn more about pokemon - would you like to explore the pokedex?"
+        puts "\nI hear you came to learn more about pokemon. Would you like to explore the pokedex?"
 
         sleep(2)
     
@@ -28,6 +28,8 @@ class Cli
         if user_input == "yes" || user_input == "y"
 
             puts "\nI'm delighted to hear that! Your grand adventure is about to unfold!"
+
+            puts "\n"
 
             display_list_of_pokemons #call method 
 
