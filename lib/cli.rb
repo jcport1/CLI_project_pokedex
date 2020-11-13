@@ -61,7 +61,7 @@ class Cli
         max_limit = Pokemon.all.length - 1
 
 
-        until index.between?(0,max_limit)
+        until pokemon.between?(0,max_limit)
             puts "Erm, sorry that's not a valid choice"
             pokemon = gets.strip.to_i - 1 #re-ask for user input if invalid
         end 
