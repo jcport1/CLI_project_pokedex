@@ -80,11 +80,11 @@ class Cli
     def display_pokemon_info(pokemon_object_lookup)
 
         #display details
-        puts "\nName: #{pokemon.name}"
+        puts "\nName: #{pokemon_object_lookup.name}"
         sleep(1)
-        puts "Height: #{pokemon.height}"
-        puts "Weight: #{pokemon.weight}"
-        puts "Abilities: #{pokemon.abilities}"
+        puts "Height: #{pokemon_object_lookup.height}"
+        puts "Weight: #{pokemon_object_lookup.weight}"
+        puts "Abilities: #{pokemon_object_lookup.abilities}"
        # puts pokemon.pokemon_data
      end 
 

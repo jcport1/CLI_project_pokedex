@@ -28,6 +28,5 @@ class API
         pokemon_object_lookup.weight = pokemon_details["weight"]
         pokemon_object_lookup.abilities = pokemon_details["abilities"][0]
 
-       binding.pry 
     end 
 end 
