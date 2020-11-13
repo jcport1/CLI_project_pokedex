@@ -27,6 +27,7 @@ class API
         pokemon_object_lookup.height = pokemon_details["height"]
         pokemon_object_lookup.weight = pokemon_details["weight"]
         pokemon_object_lookup.abilities = pokemon_details["abilities"][0]["ability"]["name"]
+        pokemon_object_lookup.type = pokemon_details["types"][0]["type"]["name"]
 
     end 
 end 

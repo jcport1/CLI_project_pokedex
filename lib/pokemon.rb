@@ -1,6 +1,6 @@
 class Pokemon
 
-    attr_accessor :name, :url, :height, :weight, :abilities #other important attributes
+    attr_accessor :name, :url, :height, :weight, :abilities, :type #other important attributes
 
     @@all = []
 
@@ -10,7 +10,8 @@ class Pokemon
         @url = url 
         @height = height
         @weight = weight
-        @abilities = abilities 
+        @abilities = abilities
+        @type = type 
         @@all << self
 
     end 
