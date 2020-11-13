@@ -3,11 +3,11 @@ class Cli
 
     def start
 
-        puts "*-------------------------------------*"
+        puts "\n*-------------------------------------*"
         puts "\nWelcome to Pallet Town, Ash Ketchum!"
         puts "\n*-------------------------------------*"
         sleep(2)
-        puts "\nMy name is Professor Oak"
+        puts "\nMy name is Professor Oak."
         API.grab_pokemons
         self.menu 
     
@@ -17,7 +17,7 @@ class Cli
 
         sleep(2)
 
-        puts "\nWannna explore the pokedex?"
+        puts "\nI hear you came to learn more about pokemon? Would you like to explore the pokedex?"
 
         sleep(2)
     
@@ -27,7 +27,7 @@ class Cli
 
         if user_input == "yes" || user_input == "y"
 
-            puts "\nThe user's tale of grand adventure is about to unfold!"
+            puts "\nI'm delighted to hear that! Your grand adventure is about to unfold!"
 
             display_list_of_pokemons #call method 
 
