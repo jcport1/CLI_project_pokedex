@@ -97,7 +97,7 @@ class Cli
        sleep(1)
        puts "Height: #{pokemon.height}"
        puts "Weight: #{pokemon.weight}"
-       puts "Abilities: #{pokemon.abilities"
+       puts "Abilities: #{pokemon.abilities}"
 
        # puts pokemon.pokemon_data
 
