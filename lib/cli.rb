@@ -18,15 +18,21 @@ class Cli
         puts "Wannna explore the pokedex?"
         puts "*---------------------*"
         puts "Type 'yes' to continue or any other key to exit"
+
         user_input = gets.strip.downcase
+
         if user_input == "yes" || user_input == "y"
 
             puts "The user's tale of grand adventure is about to unfold!"
-            display_list_of_pokemons
-            ask_user_for_pokemon_choice
+
+            display_list_of_pokemons #call method 
+
+            ask_user_for_pokemon_choice #call method 
+
             sleep(1)
-            menu 
-            #or while loop* 
+            menu #call menu to return to menu options 
+
+            #Also possible to have while loop instead 
 
         else 
             #end the program
@@ -35,10 +41,21 @@ class Cli
 
     end 
 
+    def display_list_of_pokemons
+
+        #access all the pokemon
+        #print each one out
+        Pokemon.all.each.with_index(1) do |pokemon, index|
+            puts "#{index}. #{pokemon.name}" 
+        end 
+
+    end 
+
     def ask_user_for_pokemon_choice
 
         puts "*---------------------*"
         puts "Pokemon around the world wait for you. Enter a number for more info."
+
         index = gets.strip.to_i - 1 #ask for user input
         max_limit = Pokemon.all.length - 1
 
@@ -59,21 +76,11 @@ class Cli
 
         #display details
        puts pokemon.name
+       sleep(1)
        puts pokemon.attribute  
 
        # puts pokemon.pokemon_data
 
    end 
-
-    def display_list_of_pokemons
-
-        #access all the pokemon
-        #print each one out
-        Pokemon.all.each.with_index(1) do |pokemon, index|
-            puts "#{index}. #{pokemon.name}" 
-        end 
-
-    end 
-   
 
 end 

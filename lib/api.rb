@@ -8,6 +8,7 @@ class API
         response = Net::HTTP.get(uri)
         hash = JSON.parse(response)
         array_of_pokemons = hash["results"]
+        
         array_of_pokemons.each do |pokemon|
            Pokemon.new(name: pokemon["name"], attribute: pokemon["url"])
            #iterating one more level to get the pokemon url info? 
