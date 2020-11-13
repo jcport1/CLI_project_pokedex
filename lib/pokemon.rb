@@ -7,7 +7,7 @@ class Pokemon
     def initialize(name:, url:)
 
         @name = name
-        @index = index
+        @url = url 
         @height = height
         @weight = weight
         @abilities = abilities 
