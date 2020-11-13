@@ -9,7 +9,6 @@ class Cli
         sleep(2)
         puts "\nMy name is Professor Oak."
         API.grab_pokemons
-        API.grab_pokemon_info 
         self.menu 
     
     end 
@@ -94,10 +93,11 @@ class Cli
     def display_pokemon_details(pokemon)
 
         #display details
-       puts "Name: #{pokemon.name}"
+       puts "\nName: #{pokemon.name}"
        sleep(1)
        puts "Height: #{pokemon.height}"
        puts "Weight: #{pokemon.weight}"
+       puts "Abilities: #{pokemon.abilities"
 
        # puts pokemon.pokemon_data
 
