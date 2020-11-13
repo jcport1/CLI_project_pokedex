@@ -91,9 +91,10 @@ class Cli
     def display_pokemon_details(pokemon)
 
         #display details
-       puts pokemon.name
+       puts "Name: #{pokemon.name}"
        sleep(1)
-       puts pokemon.attribute  
+       puts "Height: #{pokemon.height}"
+       puts "Weight: #{pokemon.weight}"
 
        # puts pokemon.pokemon_data
 
