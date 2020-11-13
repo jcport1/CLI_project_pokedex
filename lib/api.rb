@@ -30,10 +30,6 @@ class API
         pokemon.weight = pokemon_details["weight"]
         pokemon.abilities = pokemon_details["abilities"][0]
        
-
-
-        
-
     end 
 
 end 
