@@ -20,29 +20,29 @@ class Cli
         sleep(2)
         puts "\nType 'yes' to continue or any other key to exit"
         user_input = gets.strip.downcase
+
         if user_input == "yes" || user_input == "y"
-            prompt_user
+            self.prompt_user
         else 
             #end the program
             sleep(2)
             puts "\nOk...You have the ability to become a great Pokemon Professor someday!"
             puts "\n"
+        end 
     end 
 
     def prompt_user 
         
         puts "\nI'm delighted to hear that! Your grand adventure is about to unfold!"
         puts "\n"
-        display_list_of_pokemons #call method 
-        ask_user_for_pokemon_choice #call method 
+        self.display_list_of_pokemons #call method 
+        self.ask_user_for_pokemon_choice #call method 
         sleep(1)
-        menu #call menu to return to menu options 
+        self.menu #call menu to return to menu options 
         #also possible to have while loop instead 
        
     end 
 
-
-    end 
 
     def display_list_of_pokemons
 
@@ -70,7 +70,6 @@ class Cli
         #instead call the method that will print out the details
         #puts pokemon_instance.name 
         puts "Great choice! Here ya go:"
-
         sleep (2)
         puts "\n"
         Api.grab_pokemon_info(pokemon_instance)
@@ -78,7 +77,7 @@ class Cli
     end 
 
     def display_pokemon_info(pokemon_instance)
-        
+
         #display details
         puts "\nName: #{pokemon.name}"
         sleep(1)
@@ -87,4 +86,5 @@ class Cli
         puts "Abilities: #{pokemon.abilities}"
        # puts pokemon.pokemon_data
      end 
+
 end 
