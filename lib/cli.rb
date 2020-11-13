@@ -84,7 +84,7 @@ class Cli
         sleep(1)
         puts "\nHeight: #{pokemon_object_lookup.height} decimetres"
         puts "\nWeight: #{pokemon_object_lookup.weight} hectograms"
-        puts "\nAbilities: #{pokemon_object_lookup.abilities}"
+        puts "\nMain Ability: #{pokemon_object_lookup.abilities}"
        # puts pokemon.pokemon_data
      end 
 
