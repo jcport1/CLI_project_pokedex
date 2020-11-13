@@ -1,5 +1,5 @@
 require 'pry'
-class API
+class Api
     
     def self.grab_pokemons
      
@@ -13,9 +13,6 @@ class API
            Pokemon.new(name: pokemon["name"], url: pokemon["url"])
            #iterating one more level to get the pokemon url info? 
         end 
-
-        
-
     end 
 
 
@@ -25,11 +22,11 @@ class API
         uri = URI(url)
         response = Net::HTTP.get(uri)
         pokemon_details = JSON.parse(response)
+        
 
         pokemon.height = pokemon_details["height"]
         pokemon.weight = pokemon_details["weight"]
         pokemon.abilities = pokemon_details["abilities"][0]
        
     end 
-
 end 

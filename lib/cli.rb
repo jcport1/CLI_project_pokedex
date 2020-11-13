@@ -8,7 +8,6 @@ class Cli
         puts "\n*-------------------------------------*"
         sleep(2)
         puts "\nMy name is Professor Oak."
-        API.grab_pokemons
         self.menu 
     
     end 
@@ -48,6 +47,7 @@ class Cli
 
         #access all the pokemon
         #print each one out
+        Api.grab_pokemons
         Pokemon.all.each.with_index(1) do |pokemon, index|
             puts "#{index}. #{pokemon.name}" 
         end 
