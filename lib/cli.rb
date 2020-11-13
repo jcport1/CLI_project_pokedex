@@ -2,7 +2,7 @@
 class Cli
 
     def start
-        
+
         puts "\n*-------------------------------------*"
         puts "\nWelcome to Pallet Town, Ash Ketchum!"
         puts "\n*-------------------------------------*"
@@ -14,16 +14,23 @@ class Cli
     end 
 
     def menu
-
+        
         sleep(2)
         puts "\nI hear you came to learn more about pokemon. Would you like to explore the pokedex?"
         sleep(2)
         puts "\nType 'yes' to continue or any other key to exit"
-        @user_input = gets.strip.downcase
+        user_input = gets.strip.downcase
         if user_input == "yes" || user_input == "y"
+            prompt_user
+        else 
+            #end the program
+            sleep(2)
+            puts "\nOk...You have the ability to become a great Pokemon Professor someday!"
+            puts "\n"
+
     end 
 
-    def orig_input(input)
+    def prompt_user 
         
         puts "\nI'm delighted to hear that! Your grand adventure is about to unfold!"
         puts "\n"
@@ -32,14 +39,9 @@ class Cli
         sleep(1)
         menu #call menu to return to menu options 
         #also possible to have while loop instead 
-
-    else 
-        #end the program
-        sleep(2)
-        puts "\nOk...You have the ability to become a great Pokemon Professor someday!"
-        puts "\n"
        
     end 
+
 
     end 
 
