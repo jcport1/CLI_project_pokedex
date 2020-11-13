@@ -19,7 +19,7 @@ class API
     end 
 
 
-    def self.grab_pokemon_info
+    def self.grab_pokemon_info(pokemon)
      
         url = "https://pokeapi.co/api/v2/pokemon/#{pokemon.index}"
         uri = URI(url)

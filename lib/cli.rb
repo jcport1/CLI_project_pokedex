@@ -69,12 +69,12 @@ class Cli
 
 
 
-        index = gets.strip.to_i - 1 #ask for user input
+        pokemon = gets.strip.to_i - 1 #ask for user input
         max_limit = Pokemon.all.length - 1
 
         until index.between?(0,max_limit)
             puts "Erm, sorry that's not a valid choice"
-            index = gets.strip.to_i - 1 #re-ask for user input if invalid
+            pokemon = gets.strip.to_i - 1 #re-ask for user input if invalid
         end 
 
         pokemon_instance = Pokemon.all[index]
@@ -91,6 +91,8 @@ class Cli
     end 
 
     def display_pokemon_details(pokemon)
+
+        API.grab_pokemon_info 
 
         #display details
        puts "\nName: #{pokemon.name}"
