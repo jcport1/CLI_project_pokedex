@@ -9,6 +9,7 @@ class Cli
         sleep(2)
         puts "\nMy name is Professor Oak."
         API.grab_pokemons
+        API.grab_pokemon_info 
         self.menu 
     
     end 
@@ -66,6 +67,8 @@ class Cli
 
        
         puts "\nPokemon around the world wait for you! Enter a number for more info."
+
+
 
         index = gets.strip.to_i - 1 #ask for user input
         max_limit = Pokemon.all.length - 1
