@@ -17,7 +17,7 @@ class Cli
 
         sleep(2)
 
-        puts "\nI hear you came to learn more about pokemon? Would you like to explore the pokedex?"
+        puts "\nI hear you came to learn more about pokemon - would you like to explore the pokedex?"
 
         sleep(2)
     
