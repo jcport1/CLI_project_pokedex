@@ -1,5 +1,5 @@
 require 'pry'
-class Api
+class API
     
     def self.grab_pokemons
      
@@ -16,7 +16,7 @@ class Api
     end 
 
 
-    def self.grab_pokemon_info(pokemon_object_lookup)
+    def self.pokemon_info(pokemon_object_lookup)
      
         url = "#{pokemon_object_lookup.url}"
         uri = URI(url)
@@ -24,9 +24,10 @@ class Api
         pokemon_details = JSON.parse(response)
         
 
-        pokemon.height = pokemon_details["height"]
-        pokemon.weight = pokemon_details["weight"]
-        pokemon.abilities = pokemon_details["abilities"][0]
-       
+        pokemon_object_lookup.height = pokemon_details["height"]
+        pokemon_object_lookup.weight = pokemon_details["weight"]
+        pokemon_object_lookup.abilities = pokemon_details["abilities"][0]
+
+       binding.pry 
     end 
 end 

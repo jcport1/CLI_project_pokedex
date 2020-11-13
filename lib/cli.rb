@@ -6,7 +6,7 @@ class Cli
         puts "\n*-------------------------------------*"
         puts "\nWelcome to Pallet Town, Ash Ketchum!"
         puts "\n*-------------------------------------*"
-        sleep(2)
+        sleep(1)
         puts "\nMy name is Professor Oak."
         self.menu 
     
@@ -14,9 +14,9 @@ class Cli
 
     def menu
         
-        sleep(2)
+        sleep(1)
         puts "\nI hear you came to learn more about pokemon. Would you like to explore the pokedex?"
-        sleep(2)
+        sleep(1)
         puts "\nType 'yes' to continue or any other key to exit"
         user_input = gets.strip.downcase
 
@@ -24,7 +24,7 @@ class Cli
             self.prompt_user
         else 
             #end the program
-            sleep(2)
+            sleep(1)
             puts "\nOk...You have the ability to become a great Pokemon Professor someday!"
             puts "\n"
         end 
@@ -47,7 +47,7 @@ class Cli
 
         #access all the pokemon
         #print each one out
-        Api.grab_pokemons
+        API.grab_pokemons
         Pokemon.all.each.with_index(1) do |pokemon, index|
             puts "#{index}. #{pokemon.name}" 
         end 
@@ -73,7 +73,7 @@ class Cli
         puts "Great choice! Here ya go:"
         sleep (2)
         puts "\n"
-        API.grab_pokemon_info(pokemon_object_lookup)
+        API.pokemon_info(pokemon_object_lookup) 
         self.display_pokemon_info(pokemon_object_lookup)
     end 
 
