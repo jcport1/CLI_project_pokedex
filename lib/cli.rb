@@ -6,9 +6,8 @@ class Cli
         puts "*-------------------------------------*"
         puts "\nWelcome to Pallet Town, Ash Ketchum!"
         puts "\n*-------------------------------------*"
-        sleep(1)
+        sleep(2)
         puts "\nMy name is Professor Oak"
-        puts "\n*-------------------------------------*"
         API.grab_pokemons
         self.menu 
     
@@ -18,7 +17,7 @@ class Cli
 
         puts "\nWannna explore the pokedex?"
 
-        sleep(1)
+        sleep(2)
     
         puts "\nType 'yes' to continue or any other key to exit"
 
@@ -40,7 +39,7 @@ class Cli
         else 
             #end the program
 
-            sleep(1)
+            sleep(2)
             
             puts "\nOk...You have the ability to become a great Pokemon Professor someday!"
            
