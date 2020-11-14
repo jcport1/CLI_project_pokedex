@@ -35,7 +35,10 @@ class Cli
             self.display_list_of_pokemons #call method 
             self.ask_user_for_pokemon_choice #call method
             puts "\n*-------------------------------------*"
-            puts "\nHm, the pokedex is pretty long."
+            puts "\nThat's some really neat info!"
+            puts "\n*-------------------------------------*"
+            sleep(1)
+            puts "\nHm, but the list of pokemon in the pokedex is pretty long."
             puts "\n*-------------------------------------*"
             self.find_by_name 
             sleep(2)
@@ -96,6 +99,7 @@ class Cli
         end 
         puts "\n*-------------------------------------*"
         puts "\nWow, you're on your way to becoming an authority!"
+        puts "\n*-------------------------------------*"
         menu_navigation 
     end 
 
@@ -149,7 +153,7 @@ class Cli
     def find_by_name
 
         sleep (2)
-        puts "\nLet's search by name instead..." #or pull up the list again
+        puts "\nAlright, let's search by name..." #or pull up the list again
         puts "\n*-------------------------------------*"
         puts "\n"
         puts "\nEnter the pokemon's name for more info".colorize(:blue)
