@@ -28,10 +28,10 @@ class Cli
 
         if user_input == "yes" || user_input == "y"
             self.prompt_user
-            sleep(4)
+            sleep(3)
             self.display_list_of_pokemons #call method 
             self.ask_user_for_pokemon_choice #call method
-            puts "Hm, that was a pretty long list."
+            puts "\nHm, that was a pretty long list."
             self.find_by_name #search for pokemon by name, display list? or exit? 
             sleep(2)
             self.menu
@@ -96,11 +96,15 @@ class Cli
         puts "\n"
         puts "Let's search by name" #or pull up the list again
         puts "Enter the pokemon's name for more info"
+        # puts "\n"
         pokemon_name_choice = gets.strip
+         
         #if pokemon name is valid 
 
         if pokemon_name_choice = Pokemon.find_by_name(pokemon_name_choice)
             #pokemon_object_by_name = Pokemon.find_by_name(pokemon_name_choice)
+            API.pokemon_info(pokemon_name_choice)
+            # binding.pry 
             self.display_pokemon_info(pokemon_name_choice)
         else 
             puts "Erm, sorry that's not a valid choice"
