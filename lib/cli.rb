@@ -52,8 +52,10 @@ class Cli
             #end the program
             sleep(2)
             puts "\n*-------------------------------------*"
-            puts "\nOk...You have the ability to become a great Pokemon Professor someday!"
-            puts "\n"
+            puts "\nAlright, sad to see you go"
+            puts "\n*-------------------------------------*"
+            sleep(1)
+            puts "\nRemember, you have the ability to become a great Pokemon Professor someday!"
             exit 
         end 
         
@@ -89,8 +91,10 @@ class Cli
         elsif menu_choice == "exit"
             sleep(2)
             puts "\n*-------------------------------------*"
-            puts "\nOk...You have the ability to become a great Pokemon Professor someday!"
+            puts "\nAlright, sad to see you go."
             puts "\n*-------------------------------------*"
+            sleep(1)
+            puts "\nRemember, you have the ability to become a great Pokemon Professor someday!"
             exit  
         else
             puts "\n*-------------------------------------*"
@@ -153,7 +157,7 @@ class Cli
     def find_by_name
 
         sleep (2)
-        puts "\nAlright, let's search by name..." #or pull up the list again
+        puts "\nLet's search by name..." #or pull up the list again
         puts "\n*-------------------------------------*"
         puts "\n"
         puts "\nEnter the pokemon's name for more info".colorize(:blue)
