@@ -71,7 +71,7 @@ class Cli
         #also possible to have while loop instead 
     end 
 
-    def menu_navigation
+    def menu_navigation #fix error message
 
         # puts "\n*-------------------------------------*"
         puts "\nEnter 'search' to look up a pokemon, 'pokedex' to see all pokemon again, or 'exit' to close program".colorize(:blue)
