@@ -8,8 +8,10 @@ class Cli
         puts "\n*-------------------------------------*"
         sleep(1)
         puts "\nMy name is Professor Oak."
+        puts "\n*-------------------------------------*"
         sleep(1)
         puts "\nI hear you want to learn more about pokemon."
+        puts "\n*-------------------------------------*"
         self.menu 
     
     end 
