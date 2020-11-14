@@ -80,6 +80,7 @@ class Cli
     def ask_user_for_pokemon_choice
 
         puts "\nPokemon around the world wait for you! Enter a number for more info."
+        puts "\n"
         pokemon_choice_index = gets.strip.to_i - 1 #ask for user input
         max_limit = Pokemon.all.length - 1
 
