@@ -15,9 +15,10 @@ class Cli
     def menu
         
         sleep(2)
-        puts "\nI hear you came to learn more about pokemon. Would you like to explore the pokedex?"
+        puts "\nI hear you want to learn more about pokemon. Would you like to explore the pokedex?"
         sleep(2)
         puts "\nType 'yes' to continue or any other key to exit"
+        puts "\n"
         user_input = gets.strip.downcase
 
         if user_input == "yes" || user_input == "y"
@@ -48,6 +49,7 @@ class Cli
     def second_prompt 
 
         puts "\nWould you like to see another pokemon? Enter y or n"
+        puts "\n"
         second_input = gets.strip.downcase
 
         if second_input == "y"
@@ -55,6 +57,7 @@ class Cli
 
         elsif second_input == "n"
             puts "\nOk...You have the ability to become a great Pokemon Professor someday!"
+            puts "\n"
             exit 
         else 
 
@@ -93,7 +96,8 @@ class Cli
         #user chose pokemon
         pokemon_object_lookup = Pokemon.all[pokemon_choice_index]
         #instead call the method that will print out the details
-        #puts pokemon_instance.name 
+        #puts pokemon_instance.name
+        puts "\n"
         puts "Great choice! Here ya go:"
         sleep (2)
         puts "\n"
