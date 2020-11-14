@@ -34,7 +34,7 @@ class Cli
             puts "\nHm, that was a pretty long list."
             self.find_by_name 
             sleep(2)
-            puts "\n Fascinating! You're on your way to becoming a pokemon master"
+            puts "\n Fascinating...You're on your way to becoming a pokemon master!"
         else 
             #end the program
             sleep(2)
