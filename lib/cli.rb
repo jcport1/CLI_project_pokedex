@@ -13,7 +13,7 @@ class Cli
         puts "\nI hear you want to learn more about pokemon."
         puts "\n*-------------------------------------*"
         sleep(1)
-        puts "\n Well, you came to the right place!"
+        puts "\nWell, you came to the right place!"
         puts "\n*-------------------------------------*"
         API.grab_pokemons
         self.menu 
@@ -54,9 +54,10 @@ class Cli
     end 
 
     def prompt_user 
-        
+
+        puts "\n*-------------------------------------*"
         puts "\nI'm delighted to hear that!"
-        puts "\n"
+        puts "\n*-------------------------------------*"
         sleep(1)
         puts "\nLet's pull up all the pokemon to start"
         # self.menu #call menu to return to menu options 
@@ -67,6 +68,7 @@ class Cli
 
         puts "\n*-------------------------------------*"
         puts "\nEnter search to look up a pokemon, 'pokedex' to see all pokemon again, or exit to close program"
+        puts "\n"
         menu_choice = gets.strip
 
         if menu_choice == "search" 
@@ -78,9 +80,10 @@ class Cli
             sleep(2)
             puts "\n*-------------------------------------*"
             puts "\nOk...You have the ability to become a great Pokemon Professor someday!"
-            puts "\n"
+            puts "\n*-------------------------------------*"
             exit  
         else
+            puts "\n*-------------------------------------*"
             puts "\nErm, sorry that's not a valid choice"
             menu_choice = gets.strip 
         end 
@@ -104,6 +107,7 @@ class Cli
         puts "\n*-------------------------------------*"
         puts "\nI'm impressed! Enter a number for more info."
         puts "\n"
+        puts "\n*-------------------------------------*"
         pokemon_choice_index = gets.strip.to_i - 1 #ask for user input
         max_limit = Pokemon.all.length - 1
 
@@ -118,6 +122,7 @@ class Cli
         #instead call the method that will print out the details
         #puts pokemon_instance.name
         puts "\n"
+        puts "\n*-------------------------------------*"
         puts "Great choice! Here ya go:"
         sleep (1)
         puts "\n"
@@ -126,7 +131,7 @@ class Cli
     end 
 
     def find_by_name
-        
+
         puts "\n*-------------------------------------*"
         puts "\n"
         puts "Let's search by name instead" #or pull up the list again
