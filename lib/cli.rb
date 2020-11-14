@@ -28,6 +28,9 @@ class Cli
             puts "\nOk...You have the ability to become a great Pokemon Professor someday!"
             puts "\n"
         end 
+
+        self.second_prompt 
+        
     end 
 
     def prompt_user 
@@ -37,9 +40,29 @@ class Cli
         self.display_list_of_pokemons #call method 
         self.ask_user_for_pokemon_choice #call method 
         sleep(1)
-        self.menu #call menu to return to menu options 
+        # self.menu #call menu to return to menu options 
         #also possible to have while loop instead 
        
+    end 
+
+    def second_prompt 
+
+        puts "Would you like to see another pokemon? Enter y or n"
+        second_input = gets.strip.downcase
+
+        if second_input == "y"
+            self.prompt_user
+
+        elsif second_input == "n"
+            puts "\nOk...You have the ability to become a great Pokemon Professor someday!"
+            exit 
+        else 
+
+            puts "Erm, sorry I didn't catch that"
+            self.second_prompt 
+        end 
+
+        self.second_prompt  
     end 
 
 
