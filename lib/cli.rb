@@ -48,8 +48,10 @@ class Cli
 
         if menu_choice == "search" 
             self.find_by_name
+            menu_choice = gets.strip 
         elsif menu_choice == "pokedex"
             self.display_list_of_pokemons
+            menu_choice = gets.strip 
         elsif menu_choice == "exit"
         exit  
         else
