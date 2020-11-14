@@ -8,6 +8,7 @@ class Cli
         puts "\n*-------------------------------------*"
         sleep(1)
         puts "\nMy name is Professor Oak."
+        puts "\nI hear you want to learn more about pokemon."
         self.menu 
     
     end 
@@ -15,7 +16,7 @@ class Cli
     def menu
         
         sleep(2)
-        puts "\nI hear you want to learn more about pokemon. Would you like to explore the pokedex?"
+        puts "Would you like to explore the pokedex?"
         sleep(2)
         puts "\nType 'yes' to continue or any other key to exit"
         puts "\n"
@@ -23,49 +24,25 @@ class Cli
 
         if user_input == "yes" || user_input == "y"
             self.prompt_user
+            self.display_list_of_pokemons #call method 
+            self.ask_user_for_pokemon_choice #call method 
+            sleep(2)
+            self.menu
         else 
             #end the program
             sleep(2)
             puts "\nOk...You have the ability to become a great Pokemon Professor someday!"
             puts "\n"
         end 
-
-        self.second_prompt 
-
+        
     end 
 
     def prompt_user 
         
         puts "\nI'm delighted to hear that! Your grand adventure is about to unfold!"
         puts "\n"
-        self.display_list_of_pokemons #call method 
-        self.ask_user_for_pokemon_choice #call method 
-        sleep(2)
         # self.menu #call menu to return to menu options 
         #also possible to have while loop instead 
-       
-    end 
-
-    def second_prompt 
-
-        puts "\nWould you like to see another pokemon? Enter y or n"
-        puts "\n"
-        second_input = gets.strip.downcase
-
-        if second_input == "y"
-            self.prompt_user
-
-        elsif second_input == "n"
-            puts "\nOk...You have the ability to become a great Pokemon Professor someday!"
-            puts "\n"
-            exit 
-        else 
-
-            puts "\nErm, sorry I didn't catch that"
-            self.second_prompt 
-        end 
-
-        self.second_prompt  
     end 
 
 
