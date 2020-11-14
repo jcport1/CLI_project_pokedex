@@ -51,6 +51,7 @@ class Cli
             menu_choice = gets.strip 
         elsif menu_choice == "pokedex"
             self.display_list_of_pokemons
+            self.ask_user_for_pokemon_choice
             menu_choice = gets.strip 
         elsif menu_choice == "exit"
         exit  
