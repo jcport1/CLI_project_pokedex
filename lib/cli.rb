@@ -35,7 +35,6 @@ class Cli
             self.find_by_name 
             sleep(2)
             puts "\n Fascinating! You're on your way to becoming a pokemon master"
-            self.menu_navigation 
         else 
             #end the program
             sleep(2)
@@ -43,20 +42,6 @@ class Cli
             puts "\n"
             exit 
         end 
-        
-    end 
-
-    def prompt_user 
-        
-        puts "\nI'm delighted to hear that!"
-        puts "\n"
-        sleep(1)
-        puts "\nLet's pull up all the pokemon to start"
-        # self.menu #call menu to return to menu options 
-        #also possible to have while loop instead 
-    end 
-
-    def menu_navigation
 
         puts "\n Enter search to look up a pokemon, 'pokedex' to see all pokemon again, or exit to close program"
         menu_choice = gets.strip 
@@ -69,10 +54,19 @@ class Cli
         exit  
         else
         puts "erm, sorry that's not a valid choice"
-        end 
-
+        menu_choice = gets.strip 
+        end  
     end 
 
+    def prompt_user 
+        
+        puts "\nI'm delighted to hear that!"
+        puts "\n"
+        sleep(1)
+        puts "\nLet's pull up all the pokemon to start"
+        # self.menu #call menu to return to menu options 
+        #also possible to have while loop instead 
+    end 
 
     def display_list_of_pokemons
 
