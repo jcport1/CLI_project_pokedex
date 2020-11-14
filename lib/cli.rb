@@ -73,12 +73,16 @@ class Cli
             self.display_list_of_pokemons
             self.ask_user_for_pokemon_choice
         elsif menu_choice == "exit"
+            sleep(2)
+            puts "\nOk...You have the ability to become a great Pokemon Professor someday!"
+            puts "\n"
             exit  
         else
             puts "\nErm, sorry that's not a valid choice"
             menu_choice = gets.strip 
         end 
         
+        puts "\nWow, you're on your way to becoming an authority "
         menu_navigation 
     end 
 
@@ -94,7 +98,7 @@ class Cli
 
     def ask_user_for_pokemon_choice
 
-        puts "\nPokemon around the world wait for you! Enter a number for more info."
+        puts "\nI'm impressed! Enter a number for more info."
         puts "\n"
         pokemon_choice_index = gets.strip.to_i - 1 #ask for user input
         max_limit = Pokemon.all.length - 1
