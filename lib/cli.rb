@@ -89,7 +89,7 @@ class Cli
 
 
         until pokemon_choice_index.between?(0,max_limit)
-            puts "Erm, sorry that's not a valid choice"
+            puts "\nErm, sorry that's not a valid choice"
             pokemon_choice_index = gets.strip.to_i - 1 #re-ask for user input if invalid
         end 
 
@@ -110,6 +110,7 @@ class Cli
         puts "\n"
         puts "Let's search by name instead" #or pull up the list again
         puts "Enter the pokemon's name for more info"
+        puts "\n"
         # puts "\n"
         pokemon_name_choice = gets.strip
          
