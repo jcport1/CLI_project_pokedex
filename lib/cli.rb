@@ -35,7 +35,8 @@ class Cli
             self.display_list_of_pokemons #call method 
             self.ask_user_for_pokemon_choice #call method
             puts "\n*-------------------------------------*"
-            puts "\nHm, that was a pretty long list."
+            puts "\nHm, that first list was pretty long."
+            sleep (1)
             self.find_by_name 
             sleep(2)
             puts "\n*-------------------------------------*"
@@ -88,7 +89,7 @@ class Cli
             menu_choice = gets.strip 
         end 
         puts "\n*-------------------------------------*"
-        puts "\nWow, you're on your way to becoming an authority "
+        puts "\nWow, you're on your way to becoming an authority!"
         menu_navigation 
     end 
 
@@ -105,10 +106,10 @@ class Cli
     def ask_user_for_pokemon_choice
 
         puts "\n*-------------------------------------*"
-        puts "\nI'm impressed by the abundance of pokemons!"
+        puts "\nImpressive. I'm always suprised by the abundance of pokemons!"
         puts "\n*-------------------------------------*"
-        sleep (1)
-        puts  "\nLet's choose a pokemon to research"
+        sleep (2)
+        puts  "\nLet's choose a pokemon to research."
         puts "\n*-------------------------------------*"
         puts "\n"
         puts "\nEnter a pokemon number for more info.".colorize(:blue)
@@ -139,7 +140,8 @@ class Cli
         puts "\n*-------------------------------------*"
         puts "\nLet's search by name instead..." #or pull up the list again
         puts "\n*-------------------------------------*"
-        puts "Enter the pokemon's name for more info".colorize(:blue)
+        puts "\n"
+        puts "\nEnter the pokemon's name for more info".colorize(:blue)
         puts "\n"
         # puts "\n"
         pokemon_name_choice = gets.strip
