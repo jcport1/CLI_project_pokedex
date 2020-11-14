@@ -24,8 +24,8 @@ class Cli
         
         sleep(2)
         puts "\n"
-        puts "Would you like to explore the pokedex?"
-        puts "Type 'yes' to continue or any other key to exit"
+        puts "Would you like to explore the pokedex?".colorize(:blue)
+        puts "Type 'yes' to continue or any other key to exit".colorize(:blue)
         puts "\n"
         user_input = gets.strip.downcase
 
@@ -67,7 +67,7 @@ class Cli
     def menu_navigation
 
         puts "\n*-------------------------------------*"
-        puts "\nEnter search to look up a pokemon, 'pokedex' to see all pokemon again, or exit to close program"
+        puts "\nEnter search to look up a pokemon, 'pokedex' to see all pokemon again, or exit to close program".colorize(:blue)
         puts "\n"
         menu_choice = gets.strip
 
@@ -84,7 +84,7 @@ class Cli
             exit  
         else
             puts "\n*-------------------------------------*"
-            puts "\nErm, sorry that's not a valid choice"
+            puts "\nErm, sorry that's not a valid choice".colorize(:light_red)
             menu_choice = gets.strip 
         end 
         puts "\n*-------------------------------------*"
@@ -113,7 +113,7 @@ class Cli
 
 
         until pokemon_choice_index.between?(0,max_limit)
-            puts "\nErm, sorry that's not a valid choice"
+            puts "\nErm, sorry that's not a valid choice".colorize(:light_red)
             pokemon_choice_index = gets.strip.to_i - 1 #re-ask for user input if invalid
         end 
 
@@ -148,7 +148,7 @@ class Cli
             # binding.pry 
             self.display_pokemon_info(pokemon_name_choice)
         else 
-            puts "Erm, sorry that's not a valid choice"
+            puts "Erm, sorry that's not a valid choice".colorize(:light_red)
             pokemon_name_choice = gets.strip #re-ask for user input if invalid
         end 
     end 
