@@ -105,8 +105,9 @@ class Cli
     def ask_user_for_pokemon_choice
 
         puts "\n*-------------------------------------*"
-        puts "\nI'm impressed!"
+        puts "\nI'm impressed by the abundance of pokemons! Let's choose a pokemon to research"
         puts "\n*-------------------------------------*"
+        puts "\n"
         puts "\nEnter a number for more info.".colorize(:blue)
         puts "\n"
         pokemon_choice_index = gets.strip.to_i - 1 #ask for user input
