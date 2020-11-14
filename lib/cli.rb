@@ -8,6 +8,7 @@ class Cli
         puts "\n*-------------------------------------*"
         sleep(1)
         puts "\nMy name is Professor Oak."
+        sleep(1)
         puts "\nI hear you want to learn more about pokemon."
         self.menu 
     
@@ -16,9 +17,9 @@ class Cli
     def menu
         
         sleep(2)
+        puts "\n"
         puts "Would you like to explore the pokedex?"
-        sleep(2)
-        puts "\nType 'yes' to continue or any other key to exit"
+        puts "Type 'yes' to continue or any other key to exit"
         puts "\n"
         user_input = gets.strip.downcase
 
