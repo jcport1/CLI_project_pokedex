@@ -87,7 +87,6 @@ class Cli
         puts "\nWeight: #{pokemon_object_lookup.weight} hectograms"
         puts "\nMain Ability: #{pokemon_object_lookup.abilities}"
         
-       # puts pokemon.pokemon_data
      end 
 
 end 
