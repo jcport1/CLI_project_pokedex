@@ -48,17 +48,16 @@ class Cli
 
         if menu_choice == "search" 
             self.find_by_name
-            menu_choice = gets.strip 
         elsif menu_choice == "pokedex"
             self.display_list_of_pokemons
             self.ask_user_for_pokemon_choice
-            menu_choice = gets.strip 
         elsif menu_choice == "exit"
         exit  
         else
         puts "erm, sorry that's not a valid choice"
         menu_choice = gets.strip 
-        end  
+        end 
+        menu_choice = gets.strip 
     end 
 
     def prompt_user 
@@ -109,7 +108,7 @@ class Cli
     def find_by_name
 
         puts "\n"
-        puts "Let's search by name" #or pull up the list again
+        puts "Let's search by name instead" #or pull up the list again
         puts "Enter the pokemon's name for more info"
         # puts "\n"
         pokemon_name_choice = gets.strip
