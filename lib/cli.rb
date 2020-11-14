@@ -21,16 +21,17 @@ class Cli
         
         sleep(2)
         puts "\n"
-        puts "Would you like to explore the pokedex?"
+        puts "Would you like to explore the pokedex together?"
         puts "Type 'yes' to continue or any other key to exit"
         puts "\n"
         user_input = gets.strip.downcase
 
         if user_input == "yes" || user_input == "y"
             self.prompt_user
-            sleep(3)
+            sleep(4)
             self.display_list_of_pokemons #call method 
             self.ask_user_for_pokemon_choice #call method 
+            #self.search_by_name
             sleep(2)
             self.menu
         else 
@@ -47,6 +48,8 @@ class Cli
         
         puts "\nI'm delighted to hear that!"
         puts "\n"
+        sleep(1)
+        puts "\nLet's pull up all the pokemon to start"
         # self.menu #call menu to return to menu options 
         #also possible to have while loop instead 
     end 
@@ -86,6 +89,18 @@ class Cli
         API.pokemon_info(pokemon_object_lookup) 
         self.display_pokemon_info(pokemon_object_lookup)
     end 
+
+    # def search_by_name 
+
+    #     puts "Hm, that was a long list. How about we search by a name?"
+    #     puts "Enter the pokemon's name for more info"
+    #     pokemon_name_choice = gets.strip
+
+    #     if pokemon_name_choice = 
+
+
+
+    # end 
 
     def display_pokemon_info(pokemon_object_lookup)
 
