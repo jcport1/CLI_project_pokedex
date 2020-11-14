@@ -12,6 +12,7 @@ class Cli
         sleep(1)
         puts "\nI hear you want to learn more about pokemon."
         puts "\n*-------------------------------------*"
+        API.grab_pokemons
         self.menu 
     
     end 
@@ -44,7 +45,7 @@ class Cli
 
     def prompt_user 
         
-        puts "\nI'm delighted to hear that! Your grand adventure is about to unfold!"
+        puts "\nI'm delighted to hear that!"
         puts "\n"
         # self.menu #call menu to return to menu options 
         #also possible to have while loop instead 
@@ -55,7 +56,6 @@ class Cli
 
         #access all the pokemon
         #print each one out
-        API.grab_pokemons
         Pokemon.all.each.with_index(1) do |pokemon, index|
             puts "#{index}. #{pokemon.name}" 
         end 
@@ -81,7 +81,7 @@ class Cli
         #puts pokemon_instance.name
         puts "\n"
         puts "Great choice! Here ya go:"
-        sleep (2)
+        sleep (1)
         puts "\n"
         API.pokemon_info(pokemon_object_lookup) 
         self.display_pokemon_info(pokemon_object_lookup)
