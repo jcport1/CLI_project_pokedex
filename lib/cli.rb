@@ -12,6 +12,9 @@ class Cli
         sleep(1)
         puts "\nI hear you want to learn more about pokemon."
         puts "\n*-------------------------------------*"
+        sleep(1)
+        puts "\n Well, you came to the right place!"
+        puts "\n*-------------------------------------*"
         API.grab_pokemons
         self.menu 
     
@@ -31,10 +34,12 @@ class Cli
             sleep(3)
             self.display_list_of_pokemons #call method 
             self.ask_user_for_pokemon_choice #call method
+            puts "\n*-------------------------------------*"
             puts "\nHm, that was a pretty long list."
             self.find_by_name 
             sleep(2)
-            puts "\n Fascinating...You're on your way to becoming a pokemon master!"
+            puts "\n*-------------------------------------*"
+            puts "\nFascinating...You're on your way to becoming a pokemon master!"
         else 
             #end the program
             sleep(2)
@@ -59,7 +64,7 @@ class Cli
 
     def menu_navigation
         
-        puts "\n Enter search to look up a pokemon, 'pokedex' to see all pokemon again, or exit to close program"
+        puts "\nEnter search to look up a pokemon, 'pokedex' to see all pokemon again, or exit to close program"
         menu_choice = gets.strip
 
         if menu_choice == "search" 
@@ -70,7 +75,7 @@ class Cli
         elsif menu_choice == "exit"
             exit  
         else
-            puts "erm, sorry that's not a valid choice"
+            puts "\nErm, sorry that's not a valid choice"
             menu_choice = gets.strip 
         end 
         
