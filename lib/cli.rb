@@ -32,9 +32,9 @@ class Cli
             self.display_list_of_pokemons #call method 
             self.ask_user_for_pokemon_choice #call method
             puts "\nHm, that was a pretty long list."
-            self.find_by_name #search for pokemon by name, display list? or exit? 
+            self.find_by_name 
             sleep(2)
-            self.menu
+            self.menu_navigation 
         else 
             #end the program
             sleep(2)
@@ -53,6 +53,23 @@ class Cli
         puts "\nLet's pull up all the pokemon to start"
         # self.menu #call menu to return to menu options 
         #also possible to have while loop instead 
+    end 
+
+    def menu_navigation
+
+        puts "\n Enter search to look up a pokemon, 'pokedex' to see all pokemon again, or exit to close program"
+        menu_choice = gets.strip 
+
+        if menu_choice == "search" 
+            self.find_by_name
+        elsif menu_choice == "pokedex"
+            self.display_list_of_pokemons
+        elsif menu_choice == "exit"
+        exit  
+        else
+        puts "erm, sorry that's not a valid choice"
+        end 
+
     end 
 
 
