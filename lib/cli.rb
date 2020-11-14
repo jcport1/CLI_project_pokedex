@@ -2,7 +2,8 @@ require 'pry'
 class Cli
 
     def start
-
+        
+        self.logo 
         puts "\n*-------------------------------------*"
         puts "\nWelcome to Pallet Town, Ash Ketchum!"
         puts "\n*-------------------------------------*"
@@ -21,7 +22,7 @@ class Cli
         
         sleep(2)
         puts "\n"
-        puts "Would you like to explore the pokedex together?"
+        puts "Would you like to explore the pokedex?"
         puts "Type 'yes' to continue or any other key to exit"
         puts "\n"
         user_input = gets.strip.downcase
@@ -112,6 +113,16 @@ class Cli
         puts "\nWeight: #{pokemon_object_lookup.weight} hectograms"
         puts "\nMain Ability: #{pokemon_object_lookup.abilities}"
         
+     end 
+
+     def logo
+        puts "
+        ____       _            _           
+       |  _ \ ___ | | _____  __| | _____  __
+       | |_) / _ \| |/ / _ \/ _` |/ _ \ \/ /
+       |  __/ (_) |   <  __/ (_| |  __/>  < 
+       |_|   \___/|_|\_\___|\__,_|\___/_/\_\
+                                            "
      end 
 
 end 
