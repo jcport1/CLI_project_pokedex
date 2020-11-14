@@ -27,6 +27,7 @@ class Cli
 
         if user_input == "yes" || user_input == "y"
             self.prompt_user
+            sleep(3)
             self.display_list_of_pokemons #call method 
             self.ask_user_for_pokemon_choice #call method 
             sleep(2)
@@ -36,6 +37,7 @@ class Cli
             sleep(2)
             puts "\nOk...You have the ability to become a great Pokemon Professor someday!"
             puts "\n"
+            exit 
         end 
         
     end 
