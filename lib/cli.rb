@@ -67,7 +67,7 @@ class Cli
     def menu_navigation
 
         puts "\n*-------------------------------------*"
-        puts "\nEnter search to look up a pokemon, 'pokedex' to see all pokemon again, or exit to close program".colorize(:blue)
+        puts "\nEnter 'search' to look up a pokemon, 'pokedex' to see all pokemon again, or 'exit' to close program".colorize(:blue)
         puts "\n"
         menu_choice = gets.strip
 
@@ -105,7 +105,7 @@ class Cli
     def ask_user_for_pokemon_choice
 
         puts "\n*-------------------------------------*"
-        puts "\nI'm impressed! Enter a number for more info."
+        puts "\nI'm impressed!"
         puts "\n*-------------------------------------*"
         puts "\nEnter a number for more info.".colorize(:blue)
         puts "\n"
@@ -124,6 +124,7 @@ class Cli
         #puts pokemon_instance.name
         puts "\n*-------------------------------------*"
         puts "Great choice! Here ya go:"
+        puts "\n*-------------------------------------*"
         sleep (1)
         API.pokemon_info(pokemon_object_lookup) 
         self.display_pokemon_info(pokemon_object_lookup)
