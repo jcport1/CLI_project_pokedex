@@ -65,7 +65,7 @@ class Cli
 
     def menu_navigation
 
-        puts "******************************************"
+        puts "\n*-------------------------------------*"
         puts "\nEnter search to look up a pokemon, 'pokedex' to see all pokemon again, or exit to close program"
         menu_choice = gets.strip
 
@@ -76,6 +76,7 @@ class Cli
             self.ask_user_for_pokemon_choice
         elsif menu_choice == "exit"
             sleep(2)
+            puts "\n*-------------------------------------*"
             puts "\nOk...You have the ability to become a great Pokemon Professor someday!"
             puts "\n"
             exit  
@@ -100,6 +101,7 @@ class Cli
 
     def ask_user_for_pokemon_choice
 
+        puts "\n*-------------------------------------*"
         puts "\nI'm impressed! Enter a number for more info."
         puts "\n"
         pokemon_choice_index = gets.strip.to_i - 1 #ask for user input
@@ -124,7 +126,8 @@ class Cli
     end 
 
     def find_by_name
-
+        
+        puts "\n*-------------------------------------*"
         puts "\n"
         puts "Let's search by name instead" #or pull up the list again
         puts "Enter the pokemon's name for more info"
