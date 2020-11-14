@@ -36,11 +36,17 @@ class Cli
             self.ask_user_for_pokemon_choice #call method
             puts "\n*-------------------------------------*"
             puts "\nHm, that first list was pretty long."
-            sleep (1)
+            sleep (2)
             self.find_by_name 
             sleep(2)
             puts "\n*-------------------------------------*"
-            puts "\nFascinating...You're on your way to becoming a pokemon master!"
+            puts "\nSimply fascinating."
+            puts "\n*-------------------------------------*"
+            sleep (1)
+            puts "\n*-------------------------------------*"
+            puts "\nYou're on your way to becoming a pokemon master!"
+            puts "\n*-------------------------------------*"
+            sleep (2)
         else 
             #end the program
             sleep(2)
@@ -106,11 +112,16 @@ class Cli
     def ask_user_for_pokemon_choice
 
         puts "\n*-------------------------------------*"
-        puts "\nImpressive. I'm always suprised by the abundance of pokemons!"
+        puts "\nImpressive." 
         puts "\n*-------------------------------------*"
-        sleep (2)
+        sleep (1)
+        puts "\n*-------------------------------------*"
+        puts "I'm always amazed by the abundance of pokemons!"
+        puts "\n*-------------------------------------*"
+        sleep (1)
         puts  "\nLet's choose a pokemon to research."
         puts "\n*-------------------------------------*"
+        sleep (1)
         puts "\n"
         puts "\nEnter a pokemon number for more info.".colorize(:blue)
         puts "\n"
