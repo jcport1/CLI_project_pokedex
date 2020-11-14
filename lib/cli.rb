@@ -43,6 +43,7 @@ class Cli
         else 
             #end the program
             sleep(2)
+            puts "\n*-------------------------------------*"
             puts "\nOk...You have the ability to become a great Pokemon Professor someday!"
             puts "\n"
             exit 
@@ -63,7 +64,8 @@ class Cli
     end 
 
     def menu_navigation
-        
+
+        puts "******************************************"
         puts "\nEnter search to look up a pokemon, 'pokedex' to see all pokemon again, or exit to close program"
         menu_choice = gets.strip
 
@@ -81,7 +83,7 @@ class Cli
             puts "\nErm, sorry that's not a valid choice"
             menu_choice = gets.strip 
         end 
-        
+        puts "\n*-------------------------------------*"
         puts "\nWow, you're on your way to becoming an authority "
         menu_navigation 
     end 
