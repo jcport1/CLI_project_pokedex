@@ -20,5 +20,13 @@ class Pokemon
         @@all
     end 
 
+    def self.find_by_name(pokemon_choice)
+
+        self.all.find {|pokemon| pokemon.name == pokemon_choice}
+
+    end 
+
+
+
 
 end 

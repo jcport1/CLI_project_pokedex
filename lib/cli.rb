@@ -31,7 +31,7 @@ class Cli
             sleep(4)
             self.display_list_of_pokemons #call method 
             self.ask_user_for_pokemon_choice #call method 
-            #self.search_by_name
+            self.find_by_name
             sleep(2)
             self.menu
         else 
@@ -90,17 +90,15 @@ class Cli
         self.display_pokemon_info(pokemon_object_lookup)
     end 
 
-    # def search_by_name 
+    def find_by_name 
 
-    #     puts "Hm, that was a long list. How about we search by a name?"
-    #     puts "Enter the pokemon's name for more info"
-    #     pokemon_name_choice = gets.strip
+        puts "Hm, that was a long list. How about we search by a name?"
+        puts "Enter the pokemon's name for more info"
+        pokemon_name_choice = gets.strip
+        binding.pry 
+        Pokemon.find_by_name(pokemon_name_choice)
 
-    #     if pokemon_name_choice = 
-
-
-
-    # end 
+    end 
 
     def display_pokemon_info(pokemon_object_lookup)
 
