@@ -42,22 +42,9 @@ class Cli
             puts "\n"
             exit 
         end 
+        
+        self.menu_navigation
 
-        puts "\n Enter search to look up a pokemon, 'pokedex' to see all pokemon again, or exit to close program"
-        menu_choice = gets.strip 
-
-        if menu_choice == "search" 
-            self.find_by_name
-        elsif menu_choice == "pokedex"
-            self.display_list_of_pokemons
-            self.ask_user_for_pokemon_choice
-        elsif menu_choice == "exit"
-        exit  
-        else
-        puts "erm, sorry that's not a valid choice"
-        menu_choice = gets.strip 
-        end 
-        menu_choice = gets.strip 
     end 
 
     def prompt_user 
@@ -68,6 +55,26 @@ class Cli
         puts "\nLet's pull up all the pokemon to start"
         # self.menu #call menu to return to menu options 
         #also possible to have while loop instead 
+    end 
+
+    def menu_navigation
+        
+        puts "\n Enter search to look up a pokemon, 'pokedex' to see all pokemon again, or exit to close program"
+        menu_choice = gets.strip
+
+        if menu_choice == "search" 
+            self.find_by_name
+        elsif menu_choice == "pokedex"
+            self.display_list_of_pokemons
+            self.ask_user_for_pokemon_choice
+        elsif menu_choice == "exit"
+            exit  
+        else
+            puts "erm, sorry that's not a valid choice"
+            menu_choice = gets.strip 
+        end 
+        
+        menu_navigation 
     end 
 
     def display_list_of_pokemons
