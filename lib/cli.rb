@@ -105,10 +105,13 @@ class Cli
     def ask_user_for_pokemon_choice
 
         puts "\n*-------------------------------------*"
-        puts "\nI'm impressed by the abundance of pokemons! Let's choose a pokemon to research"
+        puts "\nI'm impressed by the abundance of pokemons!"
+        puts "\n*-------------------------------------*"
+        sleep (1)
+        puts  "\nLet's choose a pokemon to research"
         puts "\n*-------------------------------------*"
         puts "\n"
-        puts "\nEnter a number for more info.".colorize(:blue)
+        puts "\nEnter a pokemon number for more info.".colorize(:blue)
         puts "\n"
         pokemon_choice_index = gets.strip.to_i - 1 #ask for user input
         max_limit = Pokemon.all.length - 1
@@ -124,7 +127,7 @@ class Cli
         #instead call the method that will print out the details
         #puts pokemon_instance.name
         puts "\n*-------------------------------------*"
-        puts "Great choice! Here ya go:"
+        puts "\nGreat choice! Here ya go:"
         puts "\n*-------------------------------------*"
         sleep (1)
         API.pokemon_info(pokemon_object_lookup) 
