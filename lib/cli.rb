@@ -36,7 +36,7 @@ class Cli
             self.ask_user_for_pokemon_choice #call method
             puts "\n*-------------------------------------*"
             puts "\nHm, the pokedex is pretty long."
-            sleep (2)
+            puts "\n*-------------------------------------*"
             self.find_by_name 
             sleep(2)
             puts "\n*-------------------------------------*"
@@ -44,6 +44,7 @@ class Cli
             puts "\n*-------------------------------------*"
             sleep (1)
             puts "\nYou're on your way to becoming a pokemon master!"
+            puts "\n*-------------------------------------*"
         else 
             #end the program
             sleep(2)
@@ -65,13 +66,14 @@ class Cli
         puts "\n*-------------------------------------*"
         sleep(1)
         puts "\nLet's pull up all the pokemon to start"
+        puts "\n*-------------------------------------*"
         # self.menu #call menu to return to menu options 
         #also possible to have while loop instead 
     end 
 
     def menu_navigation
 
-        puts "\n*-------------------------------------*"
+        # puts "\n*-------------------------------------*"
         puts "\nEnter 'search' to look up a pokemon, 'pokedex' to see all pokemon again, or 'exit' to close program".colorize(:blue)
         puts "\n"
         menu_choice = gets.strip
@@ -145,7 +147,7 @@ class Cli
 
     def find_by_name
 
-        puts "\n*-------------------------------------*"
+        sleep (2)
         puts "\nLet's search by name instead..." #or pull up the list again
         puts "\n*-------------------------------------*"
         puts "\n"
