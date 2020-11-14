@@ -14,9 +14,9 @@ class Cli
 
     def menu
         
-        sleep(1)
+        sleep(2)
         puts "\nI hear you came to learn more about pokemon. Would you like to explore the pokedex?"
-        sleep(1)
+        sleep(2)
         puts "\nType 'yes' to continue or any other key to exit"
         user_input = gets.strip.downcase
 
@@ -24,13 +24,13 @@ class Cli
             self.prompt_user
         else 
             #end the program
-            sleep(1)
+            sleep(2)
             puts "\nOk...You have the ability to become a great Pokemon Professor someday!"
             puts "\n"
         end 
 
         self.second_prompt 
-        
+
     end 
 
     def prompt_user 
@@ -39,7 +39,7 @@ class Cli
         puts "\n"
         self.display_list_of_pokemons #call method 
         self.ask_user_for_pokemon_choice #call method 
-        sleep(1)
+        sleep(2)
         # self.menu #call menu to return to menu options 
         #also possible to have while loop instead 
        
@@ -47,7 +47,7 @@ class Cli
 
     def second_prompt 
 
-        puts "Would you like to see another pokemon? Enter y or n"
+        puts "\nWould you like to see another pokemon? Enter y or n"
         second_input = gets.strip.downcase
 
         if second_input == "y"
@@ -58,7 +58,7 @@ class Cli
             exit 
         else 
 
-            puts "Erm, sorry I didn't catch that"
+            puts "\nErm, sorry I didn't catch that"
             self.second_prompt 
         end 
 
