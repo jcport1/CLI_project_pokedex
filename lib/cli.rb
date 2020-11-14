@@ -35,7 +35,7 @@ class Cli
             self.display_list_of_pokemons #call method 
             self.ask_user_for_pokemon_choice #call method
             puts "\n*-------------------------------------*"
-            puts "\nHm, that first list was pretty long."
+            puts "\nHm, the pokedex is pretty long."
             sleep (2)
             self.find_by_name 
             sleep(2)
@@ -43,10 +43,7 @@ class Cli
             puts "\nSimply fascinating."
             puts "\n*-------------------------------------*"
             sleep (1)
-            puts "\n*-------------------------------------*"
             puts "\nYou're on your way to becoming a pokemon master!"
-            puts "\n*-------------------------------------*"
-            sleep (2)
         else 
             #end the program
             sleep(2)
@@ -56,6 +53,7 @@ class Cli
             exit 
         end 
         
+        sleep (2)
         self.menu_navigation
 
     end 
@@ -112,11 +110,10 @@ class Cli
     def ask_user_for_pokemon_choice
 
         puts "\n*-------------------------------------*"
-        puts "\nImpressive." 
+        puts "\nThat is impressive." 
         puts "\n*-------------------------------------*"
         sleep (1)
-        puts "\n*-------------------------------------*"
-        puts "I'm always amazed by the abundance of pokemons!"
+        puts "\nI'm always amazed by the abundance of pokemons!"
         puts "\n*-------------------------------------*"
         sleep (1)
         puts  "\nLet's choose a pokemon to research."
