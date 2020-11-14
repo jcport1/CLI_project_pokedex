@@ -137,6 +137,7 @@ class Cli
         pokemon_object_lookup = Pokemon.all[pokemon_choice_index]
         #instead call the method that will print out the details
         #puts pokemon_instance.name
+        sleep (2)
         puts "\n*-------------------------------------*"
         puts "\nGreat choice! Here ya go:"
         puts "\n*-------------------------------------*"
