@@ -106,7 +106,6 @@ class Cli
 
         puts "\n*-------------------------------------*"
         puts "\nI'm impressed! Enter a number for more info."
-        puts "\n"
         puts "\n*-------------------------------------*"
         pokemon_choice_index = gets.strip.to_i - 1 #ask for user input
         max_limit = Pokemon.all.length - 1
@@ -133,9 +132,8 @@ class Cli
     def find_by_name
 
         puts "\n*-------------------------------------*"
-        puts "\n"
-        puts "Let's search by name instead" #or pull up the list again
-        puts "Enter the pokemon's name for more info"
+        puts "\nLet's search by name instead" #or pull up the list again
+        puts "Enter the pokemon's name for more info".colorize(:blue)
         puts "\n"
         # puts "\n"
         pokemon_name_choice = gets.strip
@@ -156,12 +154,12 @@ class Cli
     def display_pokemon_info(pokemon_object_lookup)
 
         #display details
-        puts "\nName: #{pokemon_object_lookup.name}"
+        puts "\nName: #{pokemon_object_lookup.name}".colorize(:cyan)
         sleep(1)
-        puts "\nType: #{pokemon_object_lookup.type}"
-        puts "\nHeight: #{pokemon_object_lookup.height} decimetres"
-        puts "\nWeight: #{pokemon_object_lookup.weight} hectograms"
-        puts "\nMain Ability: #{pokemon_object_lookup.abilities}"
+        puts "\nType: #{pokemon_object_lookup.type}".colorize(:cyan)
+        puts "\nHeight: #{pokemon_object_lookup.height} decimetres".colorize(:cyan)
+        puts "\nWeight: #{pokemon_object_lookup.weight} hectograms".colorize(:cyan)
+        puts "\nMain Ability: #{pokemon_object_lookup.abilities}".colorize(:cyan)
         
      end 
 
