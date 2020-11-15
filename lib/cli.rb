@@ -58,7 +58,6 @@ class Cli
             puts "\n*-------------------------------------*"
             sleep(2)
             puts "\nRemember, you have the ability to become a great Pokemon Professor someday!"
-            puts "\n*-------------------------------------*"
             puts "\n"
             exit 
         end 
@@ -114,7 +113,6 @@ class Cli
             puts "\n*-------------------------------------*"
             sleep(2)
             puts "\nRemember, you have the ability to become a great Pokemon Professor someday!"
-            puts "\n*-------------------------------------*"
             puts "\n"
             exit  
         else
