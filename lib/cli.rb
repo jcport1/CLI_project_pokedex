@@ -61,6 +61,9 @@ class Cli
         end 
         
         sleep (2)
+        puts "\nWhat's next?"
+        puts "\n*-------------------------------------*"
+        sleep(1)
         self.menu_navigation
 
     end 
@@ -168,7 +171,7 @@ class Cli
         # sleep(1)
         puts "\nEnter the pokemon's name for more info".colorize(:blue)
         puts "\n"
-        
+
         pokemon_name_choice = gets.strip
          
         #if pokemon name is valid 
