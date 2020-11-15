@@ -81,13 +81,11 @@ class Cli
         sleep(2)
         puts "\nAlright,let's pull up all the pokemon to start."
         puts "\n*-------------------------------------*"
-        # self.menu #call menu to return to menu options 
-        #also possible to have while loop instead 
     end 
 
-    def menu_navigation #fix error message
+    def menu_navigation 
 
-        # puts "\n*-------------------------------------*"
+        
         puts "\nEnter 'search' to look up a pokemon, 'pokedex' to see all pokemon again, or 'exit' to close program".colorize(:blue)
         puts "\n"
         menu_choice = gets.strip.downcase
@@ -162,8 +160,6 @@ class Cli
 
         #user chose pokemon
         pokemon_object_lookup = Pokemon.all[pokemon_choice_index]
-        #instead call the method that will print out the details
-        #puts pokemon_instance.name
         sleep (2)
         puts "\n*-------------------------------------*"
         puts "\nGreat choice! Here ya go:"
@@ -183,14 +179,13 @@ class Cli
         puts "\n"
 
         pokemon_name_choice = gets.strip.downcase
-         
-        #if pokemon name is valid 
 
         until pokemon_name_choice = Pokemon.find_by_name(pokemon_name_choice)
             puts "\nErm, sorry that's not a valid choice".colorize(:light_red)
             pokemon_name_choice = gets.strip.downcase #re-ask for user input if invalid
         end 
 
+        #if pokemon name is valid 
         API.pokemon_info(pokemon_name_choice)
         self.display_pokemon_info(pokemon_name_choice)
     end 
