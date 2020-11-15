@@ -71,7 +71,10 @@ class Cli
         puts "\nI'm delighted to hear that!"
         puts "\n*-------------------------------------*"
         sleep(1)
-        puts "\nLet's pull up all the pokemon to start"
+        puts "\nOne sec while I power on the pokedex."
+        puts "\n*-------------------------------------*"
+        sleep(2)
+        puts "\nAlright,let's pull up all the pokemon to start."
         puts "\n*-------------------------------------*"
         # self.menu #call menu to return to menu options 
         #also possible to have while loop instead 
