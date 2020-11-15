@@ -2,7 +2,8 @@ require 'pry'
 class Cli
 
     def start
-        
+        self.pika_logo
+        sleep(2)
         puts "\n*-------------------------------------*"
         puts "\nWelcome to Pallet Town, Ash Ketchum!"
         puts "\n*-------------------------------------*"
@@ -53,7 +54,7 @@ class Cli
             #end the program
             sleep(2)
             puts "\n*-------------------------------------*"
-            puts "\nAlright, sad to see you go"
+            puts "\nAlright, sad to see you go."
             puts "\n*-------------------------------------*"
             sleep(2)
             puts "\nRemember, you have the ability to become a great Pokemon Professor someday!"
@@ -209,9 +210,11 @@ class Cli
         
      end 
 
-    #  def logo 
-    #     puts ""
+     def pika_logo
 
-    #  end 
+        file = File.open("./lib/pika.txt")
+        puts file.read.colorize(:light_magenta)
+
+     end 
 
 end 
