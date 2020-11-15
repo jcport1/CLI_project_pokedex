@@ -90,7 +90,7 @@ class Cli
         # puts "\n*-------------------------------------*"
         puts "\nEnter 'search' to look up a pokemon, 'pokedex' to see all pokemon again, or 'exit' to close program".colorize(:blue)
         puts "\n"
-        menu_choice = gets.strip
+        menu_choice = gets.strip.downcase
 
         if menu_choice == "search"
             puts "\n*-------------------------------------*" 
@@ -119,7 +119,7 @@ class Cli
         else
             puts "\n*-------------------------------------*"
             puts "\nErm, sorry that's not a valid choice".colorize(:light_red)
-            menu_choice = gets.strip 
+            menu_choice = gets.strip.downcase 
         end 
         
         menu_navigation 
@@ -138,7 +138,7 @@ class Cli
     def ask_user_for_pokemon_choice
 
         puts "\n*-------------------------------------*"
-        puts "\nThat is impressive." 
+        puts "\nSo many pokemons...impressive." 
         puts "\n*-------------------------------------*"
         sleep (1)
         puts "\nI'm always amazed by the abundance of pokemons!"
@@ -181,13 +181,13 @@ class Cli
         puts "\nEnter the pokemon's name for more info".colorize(:blue)
         puts "\n"
 
-        pokemon_name_choice = gets.strip
+        pokemon_name_choice = gets.strip.downcase
          
         #if pokemon name is valid 
 
         until pokemon_name_choice = Pokemon.find_by_name(pokemon_name_choice)
             puts "\nErm, sorry that's not a valid choice".colorize(:light_red)
-            pokemon_name_choice = gets.strip #re-ask for user input if invalid
+            pokemon_name_choice = gets.strip.downcase #re-ask for user input if invalid
         end 
 
         API.pokemon_info(pokemon_name_choice)
@@ -209,9 +209,7 @@ class Cli
         
      end 
 
-    #  def logo
-
-       
+    #  def logo 
     #     puts ""
 
     #  end 
