@@ -40,10 +40,11 @@ class Cli
             sleep(1)
             puts "\nHm, but the list of pokemon in the pokedex is pretty long."
             puts "\n*-------------------------------------*"
+            sleep(2)
             self.find_by_name 
             sleep(2)
             puts "\n*-------------------------------------*"
-            puts "\nSimply fascinating."
+            puts "\nSimply incredible."
             puts "\n*-------------------------------------*"
             sleep (1)
             puts "\nYou're on your way to becoming a pokemon master!"
@@ -57,6 +58,7 @@ class Cli
             sleep(2)
             puts "\nRemember, you have the ability to become a great Pokemon Professor someday!"
             puts "\n*-------------------------------------*"
+            puts "\n"
             exit 
         end 
         
@@ -90,11 +92,20 @@ class Cli
         puts "\n"
         menu_choice = gets.strip
 
-        if menu_choice == "search" 
+        if menu_choice == "search"
+            puts "\n*-------------------------------------*" 
             self.find_by_name
+            sleep(1)
+            puts "\n*-------------------------------------*"
+            puts "\nWow, you're on your way to becoming an authority!"
+            puts "\n*-------------------------------------*"
         elsif menu_choice == "pokedex"
             self.display_list_of_pokemons
             self.ask_user_for_pokemon_choice
+            sleep(1)
+            puts "\n*-------------------------------------*"
+            puts "\nYou'll be an expert in no time!"
+            puts "\n*-------------------------------------*"
         elsif menu_choice == "exit"
             sleep(2)
             puts "\n*-------------------------------------*"
@@ -103,15 +114,14 @@ class Cli
             sleep(2)
             puts "\nRemember, you have the ability to become a great Pokemon Professor someday!"
             puts "\n*-------------------------------------*"
+            puts "\n"
             exit  
         else
             puts "\n*-------------------------------------*"
             puts "\nErm, sorry that's not a valid choice".colorize(:light_red)
             menu_choice = gets.strip 
         end 
-        puts "\n*-------------------------------------*"
-        puts "\nWow, you're on your way to becoming an authority!"
-        puts "\n*-------------------------------------*"
+        
         menu_navigation 
     end 
 
@@ -164,7 +174,6 @@ class Cli
 
     def find_by_name
 
-        sleep (2)
         puts "\nLet's search by name..." #or pull up the list again
         puts "\n*-------------------------------------*"
         puts "\n"
@@ -176,15 +185,13 @@ class Cli
          
         #if pokemon name is valid 
 
-        if pokemon_name_choice = Pokemon.find_by_name(pokemon_name_choice)
-            #pokemon_object_by_name = Pokemon.find_by_name(pokemon_name_choice)
-            API.pokemon_info(pokemon_name_choice)
-            # binding.pry 
-            self.display_pokemon_info(pokemon_name_choice)
-        else 
-            puts "Erm, sorry that's not a valid choice".colorize(:light_red)
+        until pokemon_name_choice = Pokemon.find_by_name(pokemon_name_choice)
+            puts "\nErm, sorry that's not a valid choice".colorize(:light_red)
             pokemon_name_choice = gets.strip #re-ask for user input if invalid
         end 
+
+        API.pokemon_info(pokemon_name_choice)
+        self.display_pokemon_info(pokemon_name_choice)
     end 
 
     def display_pokemon_info(pokemon_object_lookup)
