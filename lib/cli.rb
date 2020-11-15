@@ -140,7 +140,7 @@ class Cli
     def ask_user_for_pokemon_choice
 
         puts "\n*-------------------------------------*"
-        puts "\nSo many pokemons...impressive." 
+        puts "\nSo many pokemon...impressive." 
         puts "\n*-------------------------------------*"
         sleep (1)
         puts "\nI'm always amazed by the abundance of pokemons!"
@@ -151,6 +151,7 @@ class Cli
         sleep (1)
         puts "\n"
         puts "\nEnter a pokemon number for more info.".colorize(:blue)
+        puts "Scroll up to see full list.".colorize(:blue)
         puts "\n"
         pokemon_choice_index = gets.strip.to_i - 1 #ask for user input
         max_limit = Pokemon.all.length - 1
