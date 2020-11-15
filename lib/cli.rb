@@ -165,9 +165,10 @@ class Cli
         puts "\nLet's search by name..." #or pull up the list again
         puts "\n*-------------------------------------*"
         puts "\n"
+        # sleep(1)
         puts "\nEnter the pokemon's name for more info".colorize(:blue)
         puts "\n"
-        # puts "\n"
+        
         pokemon_name_choice = gets.strip
          
         #if pokemon name is valid 
