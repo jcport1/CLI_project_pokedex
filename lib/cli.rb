@@ -130,8 +130,9 @@ class Cli
 
         #access all the pokemon
         #print each one out
+        puts "\n"
         Pokemon.all.each.with_index(1) do |pokemon, index|
-            puts "#{index}. #{pokemon.name}" 
+            puts "#{index}. #{pokemon.name}".colorize(:light_magenta) 
         end 
 
     end 
