@@ -57,7 +57,7 @@ class Cli
             puts "\nAlright, sad to see you go."
             puts "\n*-------------------------------------*"
             sleep(2)
-            puts "\nRemember, you have the ability to become a great Pokemon Professor someday!"
+            puts "\nRemember, you have the ability to become a great Pokemon Professor someday!".colorize(:light_magenta)
             puts "\n"
             exit 
         end 
@@ -112,7 +112,7 @@ class Cli
             puts "\nAlright, sad to see you go."
             puts "\n*-------------------------------------*"
             sleep(2)
-            puts "\nRemember, you have the ability to become a great Pokemon Professor someday!"
+            puts "\nRemember, you have the ability to become a great Pokemon Professor someday!".colorize(:light_magenta)
             puts "\n"
             exit  
         else
