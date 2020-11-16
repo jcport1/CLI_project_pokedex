@@ -33,8 +33,17 @@ class Cli
         if user_input == "yes" || user_input == "y"
             self.prompt_user
             sleep(3)
-            self.display_list_of_pokemons #call method 
+            self.display_list_of_pokemons #call method
+            sleep (1)
+            puts "\n*-------------------------------------*"
+            puts "\nSo many pokemon...impressive." 
+            puts "\n*-------------------------------------*"
+            sleep (1)
+            puts "\nI'm always amazed by the abundance of pokemon!"
+            puts "\n*-------------------------------------*"
+            sleep (1)
             self.ask_user_for_pokemon_choice #call method
+            sleep(3)
             puts "\n*-------------------------------------*"
             puts "\nThat's some really neat info!"
             puts "\n*-------------------------------------*"
@@ -43,7 +52,7 @@ class Cli
             puts "\n*-------------------------------------*"
             sleep(2)
             self.find_by_name 
-            sleep(2)
+            sleep(3)
             puts "\n*-------------------------------------*"
             puts "\nSimply incredible."
             puts "\n*-------------------------------------*"
@@ -67,7 +76,6 @@ class Cli
         puts "\n*-------------------------------------*"
         sleep(1)
         self.menu_navigation
-
     end 
 
     def prompt_user 
@@ -85,7 +93,6 @@ class Cli
 
     def menu_navigation 
 
-        
         puts "\nEnter 'search' to look up a pokemon, 'pokedex' to see all pokemon again, or 'exit' to close program".colorize(:blue)
         puts "\n"
         menu_choice = gets.strip.downcase
@@ -135,13 +142,6 @@ class Cli
 
     def ask_user_for_pokemon_choice
 
-        puts "\n*-------------------------------------*"
-        puts "\nSo many pokemon...impressive." 
-        puts "\n*-------------------------------------*"
-        sleep (1)
-        puts "\nI'm always amazed by the abundance of pokemons!"
-        puts "\n*-------------------------------------*"
-        sleep (1)
         puts  "\nLet's choose a pokemon to research."
         puts "\n*-------------------------------------*"
         sleep (1)
@@ -207,7 +207,8 @@ class Cli
         sleep(1)
         puts "\nBattle Move: #{pokemon_object_lookup.moves}".colorize(:cyan)
         sleep(1)
-        puts "\nDescription: #{pokemon_object_lookup.description}".colorize(:cyan)
+        puts "\n"
+        puts "Description: #{pokemon_object_lookup.description}".delete("\n","\f").colorize(:cyan)
      end 
 
      def pika_logo
