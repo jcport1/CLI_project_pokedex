@@ -12,7 +12,7 @@ Type bundle in your terminal to install all the required gems.
 
 Type the below and follow the on screen prompts:
 
-ruby ./bin/start
+- ruby ./bin/start
 
 ## Contributing
 
