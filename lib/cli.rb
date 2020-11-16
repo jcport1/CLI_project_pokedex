@@ -165,7 +165,8 @@ class Cli
         puts "\nGreat choice! Here ya go:"
         puts "\n*-------------------------------------*"
         sleep (1)
-        API.pokemon_info(pokemon_object_lookup) 
+        API.pokemon_info(pokemon_object_lookup)
+        API.pokemon_description(pokemon_object_lookup) 
         self.display_pokemon_info(pokemon_object_lookup)
     end 
 
@@ -187,6 +188,7 @@ class Cli
 
         #if pokemon name is valid 
         API.pokemon_info(pokemon_name_choice)
+        API.pokemon_description(pokemon_name_choice)
         self.display_pokemon_info(pokemon_name_choice)
     end 
 
@@ -204,6 +206,8 @@ class Cli
         puts "\nMain Ability: #{pokemon_object_lookup.abilities}".colorize(:cyan)
         sleep(1)
         puts "\nBattle Move: #{pokemon_object_lookup.moves}".colorize(:cyan)
+        sleep(1)
+        puts "\nDescription: #{pokemon_object_lookup.description}".colorize(:cyan)
      end 
 
      def pika_logo

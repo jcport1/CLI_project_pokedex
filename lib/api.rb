@@ -32,4 +32,15 @@ class API
         pokemon_object_lookup.id = pokemon_details["id"]
 
     end   
+
+    def self.pokemon_description(pokemon_object_lookup)
+     
+        url = "https://pokeapi.co/api/v2/pokemon-species/#{pokemon_object_lookup.name}"
+        uri = URI(url)
+        response = Net::HTTP.get(uri)
+        pokemon_details = JSON.parse(response)
+        
+        pokemon_object_lookup.description = pokemon_details["flavor_text_entries"][0]["flavor_text"]
+
+    end 
 end 
