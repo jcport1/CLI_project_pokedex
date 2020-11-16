@@ -202,7 +202,8 @@ class Cli
         puts "\nWeight: #{pokemon_object_lookup.weight} hectograms".colorize(:cyan)
         sleep(1)
         puts "\nMain Ability: #{pokemon_object_lookup.abilities}".colorize(:cyan)
-        
+        sleep(1)
+        puts "\nBattle Move: #{pokemon_object_lookup.moves}".colorize(:cyan)
      end 
 
      def pika_logo
