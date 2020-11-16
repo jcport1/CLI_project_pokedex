@@ -11,7 +11,6 @@ class API
 
         array_of_pokemons.each do |pokemon|
            Pokemon.new(name: pokemon["name"], url: pokemon["url"])
-           #iterating one more level to get the pokemon url info? 
         end 
     end 
 
@@ -41,6 +40,5 @@ class API
         pokemon_details = JSON.parse(response)
         
         pokemon_object_lookup.description = pokemon_details["flavor_text_entries"][0]["flavor_text"]
-
     end 
 end 
